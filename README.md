@@ -48,10 +48,11 @@ want to be selected by default.
 let g:xcode_scheme_ignore_pattern = "/Demo|Example/d"
 ```
 
-You can also specify a custom default simulator to use:
+You can also specify a custom default simulator & iOS to use:
 
 ```
-let g:xcode_default_simulator = 'iPhone 5'
+let g:xcode_default_simulator = 'iPhone Xs (iOS 14.1)'
+let g:xcode_default_os = '14.1'
 ```
 
 Note that manually specifying a different value with any of the setter
