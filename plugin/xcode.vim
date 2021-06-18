@@ -33,7 +33,8 @@ let s:default_runner_command = s:system_runner() . ' {cmd}'
 
 let s:default_xcpretty_flags = '--color'
 let s:default_xcpretty_testing_flags = ''
-let s:default_simulator = 'iPhone 6s'
+let s:default_os = '14.1'
+let s:default_simulator = 'iPhone Xs (iOS 14.1)'
 
 let s:plugin_path = expand('<sfile>:p:h:h')
 
@@ -342,7 +343,7 @@ function! s:destination(simulator)
 endfunction
 
 function! s:iphone_simulator_destination(simulator)
-  return '-destination "platform=iOS Simulator,name=' . a:simulator . '"'
+  return '-destination "platform=iOS Simulator,OS=' . s:default_os . ',name=' . a:simulator . '"'
 endfunction
 
 function! s:osx_destination()
